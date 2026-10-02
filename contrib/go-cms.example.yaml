@@ -1,0 +1,59 @@
+# go-cms.yaml - Configuration for go-cms
+#
+# All options here are set to the default values. If no configuration file is
+# found, then these values will be used.
+
+# Enable development features like source locations in logs.
+# Override with:
+#   GOCMS_DEV=true go-cms serve
+#   go-cms serve --dev
+dev: false
+
+# Host or interface to bind to. Empty means the default bind behavior.
+# Override with:
+#   GOCMS_HOST=127.0.0.1 go-cms serve
+#   go-cms serve --host 127.0.0.1
+host: ""
+
+# TCP port to listen on.
+# Override with:
+#   GOCMS_PORT=8080 go-cms serve
+#   go-cms serve --port 8080
+port: 1212
+
+# Auth settings.
+# Override with:
+#   GOCMS_AUTH_SECRET=change-me go-cms serve
+#   go-cms serve --auth-secret change-me
+#   GOCMS_AUTH_ACCESS_TOKEN_TTL=15m go-cms serve
+#   go-cms serve --auth-access-ttl 15m
+#   GOCMS_AUTH_REFRESH_TOKEN_TTL=720h go-cms serve
+#   go-cms serve --auth-refresh-ttl 720h
+auth:
+  secret: ""
+  access-token-ttl: 15m
+  refresh-token-ttl: 720h
+
+# Route prefix to mount the go-cms under.
+# Override with:
+#   GOCMS_ROOT=/go-cms go-cms serve
+#   go-cms serve --root /prefix
+root: ""
+
+# Log output format. Valid values: json, text.
+# Override with:
+#   GOCMS_LOGFMT=text go-cms serve
+#   go-cms serve --logfmt text
+logfmt: json
+
+# Minimum log level. Valid values: debug, info, warn, error.
+# Override with:
+#   GOCMS_LOGLVL=debug go-cms serve
+#   go-cms serve --loglvl debug
+loglvl: info
+
+# Database connection string or path.
+# Override with:
+#   GOCMS_DB=data/custom.sqlite go-cms serve
+#   go-cms serve --db data/custom.sqlite
+db: data/app.sqlite
