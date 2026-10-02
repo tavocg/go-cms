@@ -1,10 +1,10 @@
 openapi: 3.1.0
 info:
-  title: App API
+  title: go-cms API
   version: 0.1.0
   description: OpenAPI specification of App.
 servers:
-  - url: http://localhost:3080
+  - url: http://localhost:1212
     description: Local development server
 tags:
   - name: Authentication

@@ -1,4 +1,4 @@
-// Copyright © 2026 NAME HERE <EMAIL ADDRESS>
+// Copyright © 2026 Gustavo Calvo <tavo@tavo.cr>
 
 package cmd
 
@@ -22,7 +22,7 @@ func init() {
 
 	viper.SetDefault("dev", false)
 	viper.SetDefault("host", "")
-	viper.SetDefault("port", 3080)
+	viper.SetDefault("port", 1212)
 	viper.SetDefault("logfmt", "json")
 	viper.SetDefault("loglvl", "info")
 	viper.SetDefault("auth.secret", "")
@@ -35,7 +35,7 @@ func init() {
 	flags.String("db", "data/app.sqlite", "database DSN")
 	flags.Bool("dev", false, "enable dev mode")
 	flags.String("host", "", "bind host")
-	flags.Int("port", 3080, "bind port")
+	flags.Int("port", 1212, "bind port")
 	flags.String("logfmt", "json", "log format")
 	flags.String("loglvl", "info", "log level")
 	flags.String("auth-secret", "", "JWT signing secret")

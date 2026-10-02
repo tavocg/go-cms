@@ -1,5 +1,5 @@
 /*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
+Copyright © 2026 Gustavo Calvo <tavo@tavo.cr>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -33,14 +33,14 @@ import (
 var cfgFile string
 
 var rootCmd = &cobra.Command{
-	Use:   "app",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   "go-cms",
+	Short: "Lightweight CMS",
+	// Long: `A longer description that spans multiple lines and likely contains
+	// examples and usage of using your application. For example:
+	//
+	// Cobra is a CLI library for Go that empowers applications.
+	// This application is a tool to generate the needed files
+	// to quickly create a Cobra application.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return runServerFromConfig()
 	},
@@ -70,10 +70,10 @@ func initConfig() {
 		}
 
 		viper.SetConfigType("yaml")
-		viper.SetConfigName("app")
+		viper.SetConfigName("go-cms")
 	}
 
-	viper.SetEnvPrefix("APP")
+	viper.SetEnvPrefix("GOCMS")
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	viper.AutomaticEnv()
 

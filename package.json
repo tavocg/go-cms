@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "go-cms",
   "version": "0.1.0",
-  "description": "App description",
+  "description": "Lightweight CMS",
   "license": "GPL-3.0-or-later",
   "author": "",
   "type": "commonjs",
